@@ -24,7 +24,7 @@ def checkUsers(streamers):
             online.append(u.info["username"])
             print "{} is online".format(u.info["username"])
             requests.post(discord_webhook, json={
-                'content': "{} is now online: http://beam.pro/{}".format(u.info["username"], u.info["username"])
+                'content': "@here {} is now online: http://beam.pro/{}".format(u.info["username"], u.info["username"])
             })
         else:
             if not u.info['channel']['online'] and u.info["username"] in online:
